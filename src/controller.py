@@ -1,7 +1,7 @@
 import os
 import urllib.request
 from scrapy.crawler import CrawlerProcess
-from recipe_builder.recipe_builder.spiders.recipe import GoodFoodSpider
+from src.recipe_builder.recipe_builder.spiders.recipe import GoodFoodSpider
 from datetime import datetime
 
 
@@ -36,7 +36,9 @@ class Controller:
         # Scrapy spider setup
         spider = GoodFoodSpider(sample=sample)
         process = CrawlerProcess({
-            'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
+            # 'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
+            # Using a more modern user agent
+            'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0',
             'FEED_FORMAT': "json",
             'FEED_URI': "../data/output/" + datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + ".json"
         })

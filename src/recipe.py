@@ -32,8 +32,8 @@ class Recipe:
         self.nutrition = nutrition
         self.ingredients = ingredients
         self.method = method
-        self.time = time,
-        self.difficulty = difficulty,
+        self.time = time
+        self.difficulty = difficulty
         self.servings = servings
         self.img_url = img_url
 

@@ -5,7 +5,7 @@ Generating an open recipe dataset with Python, Scrapy, and xpath.
 
 In order to run the application, you would need to create virtual environment using:
 ```console
-python -m venv venv
+virtualenv -p 3.9 venv
 ```
 
 later on, load the venv:
@@ -18,6 +18,12 @@ after that you can install the packages:
 pip install -r requirements.txt
 ```
 
+NOTE: The requirements have been adjusted to work in Python 3.9.  Minor changes to the cource have been made in order to support this change as well.
+
+To run the open-recipe code:
+```console
+python -m src
+```
 ## Usage
 For default usage run **\_\_main\_\_.py**. This will create a json file containing recipe details in the directory **/open-recipe/data/output.**
 

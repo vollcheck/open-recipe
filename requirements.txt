@@ -1,1 +1,2 @@
-scapy==2.5.0
+scrapy==1.6.0
+Twisted=19.2.0
